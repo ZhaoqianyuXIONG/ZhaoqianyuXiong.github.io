@@ -18,10 +18,13 @@ data("instacart")
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### The number of orders under different departments.
 
 ```{r}
-
+instacart %>%
+  count(department) %>%
+  mutate(department = fct_reorder(department, n)) %>%
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
 ```
 
 Column {data-width=350}
