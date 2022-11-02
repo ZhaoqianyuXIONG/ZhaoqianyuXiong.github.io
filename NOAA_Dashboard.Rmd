@@ -32,7 +32,7 @@ ny_noaa %>%
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### tmax vs tmin for the full dataset.
+### tmax vs tmin for the full dataset
 
 ```{r}
 ny_noaa_tidy %>%
@@ -44,17 +44,29 @@ ny_noaa_tidy %>%
     values_to = "temperature") %>%
   ggplot(aes(x = temperature, y = observation)) +
   geom_density_ridges(scale = .85) +
-  viridis::scale_fill_viridis(discrete = TRUE) +
-  labs(title = "tmax vs tmin")
+  viridis::scale_fill_viridis(discrete = TRUE) 
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### the average max temperature in January across the years
 
 ```{r}
+mean_tmax = 
+  ny_noaa_tidy %>%
+  filter(month == 1) %>%
+  select(id, year, month, tmax) %>%
+  group_by(id, year, month) %>%
+  summarize(average_tmax = mean(tmax, na.rm = TRUE)) 
 
+mean_tmax %>%
+  na.omit() %>%
+  ggplot(aes(x = year, y = average_tmax, group = id)) +
+  geom_line() +
+  labs(x = "year",
+    y = "average max temperature"
+  )
 ```
 
 ### Chart C
