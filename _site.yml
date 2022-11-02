@@ -2,6 +2,9 @@ name: "My internet"
 output_dir: "."
 navbar:
   title: "Home"
+  left:
+    - text: "Experience"
+      href: Experience.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:<zx2424@columbia.cumc.edu>
