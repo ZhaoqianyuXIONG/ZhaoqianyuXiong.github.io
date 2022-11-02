@@ -1,0 +1,22 @@
+---
+title: "Zhaoqianyu XIONG"
+output: 
+  html_document:
+    css: bootstrap.css
+    theme: cosmo
+---
+MS student of biostatistics, Columbia University Mailman School of Public Health
+
+<center>
+<img src="images/photo2020.jpg" style="width:30%">
+</center>
+
+## *Contact Information*
+Department of Biostatistics
+Columbia Mailman School of Public Health
+
+Email: zx2424@cumc.columbia.edu
+
+
+
+
