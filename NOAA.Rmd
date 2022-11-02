@@ -12,6 +12,21 @@ library(flexdashboard)
 library(plotly)
 ```
 
+Load and tidy the data.
+```{r}
+data("ny_noaa")
+
+ny_noaa_tidy = 
+ny_noaa %>%
+  janitor::clean_names() %>%
+  separate(col = date, into = c("year", "month", "day"), sep = "-") %>%
+  mutate(month = as.integer(month)) %>%
+  mutate(year = as.integer(year)) %>%
+  mutate(day = as.integer(day)) %>%
+  mutate(tmax = as.integer(tmax)/10) %>%
+  mutate(tmin = as.integer(tmin)/10)
+```
+
 
 
 
