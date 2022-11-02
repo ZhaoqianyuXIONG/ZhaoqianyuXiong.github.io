@@ -1,0 +1,12 @@
+---
+title: "Experience"
+output: 
+  html_document:
+    css: bootstrap.css
+    theme: cosmo
+---
+Here's a brief introduction of my academic and professioncal experience.
+
+## *Education*
+I received a bachelor degree in Biological Science from Xiamen University, School of life science.
+
