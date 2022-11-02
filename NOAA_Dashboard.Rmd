@@ -11,6 +11,7 @@ library(tidyverse)
 library(p8105.datasets)
 library(flexdashboard)
 library(plotly)
+library(ggridges)
 ```
 
 ```{r, include = FALSE}
@@ -31,10 +32,20 @@ ny_noaa %>%
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### tmax vs tmin for the full dataset.
 
 ```{r}
-
+ny_noaa_tidy %>%
+  select(tmax, tmin) %>%
+  na.omit() %>%
+  pivot_longer(
+    tmax:tmin,
+    names_to = "observation",
+    values_to = "temperature") %>%
+  ggplot(aes(x = temperature, y = observation)) +
+  geom_density_ridges(scale = .85) +
+  viridis::scale_fill_viridis(discrete = TRUE) +
+  labs(title = "tmax vs tmin")
 ```
 
 Column {data-width=350}
