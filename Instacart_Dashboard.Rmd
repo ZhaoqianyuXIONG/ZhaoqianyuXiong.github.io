@@ -40,9 +40,14 @@ instacart %>%
     x = ~days_since_prior_order, y = ~n_obs, type = "box")
 ```
 
-### Chart C
+### Trend of the number of orders in a day across hours
 
 ```{r}
-
+instacart %>%
+  group_by(order_hour_of_day) %>%
+  summarize(n_obs = n()) %>%
+  plot_ly(
+    x = ~order_hour_of_day, y = ~n_obs, type = "scatter", mode = "lines+markers"
+  )
 ```
 
