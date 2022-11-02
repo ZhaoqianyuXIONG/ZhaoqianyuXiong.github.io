@@ -5,6 +5,8 @@ navbar:
   left:
     - text: "Experience"
       href: Experience.html
+    - text: "Dashboard"
+      href: Instacart_Dashboard.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:<zx2424@columbia.cumc.edu>
