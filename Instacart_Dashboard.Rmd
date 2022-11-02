@@ -30,10 +30,14 @@ instacart %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### The relationship between the days since the last order and the number of goods the customers buy.
 
 ```{r}
-
+instacart %>%
+  group_by(order_id, days_since_prior_order) %>%
+  summarize(n_obs = n()) %>%
+  plot_ly(
+    x = ~days_since_prior_order, y = ~n_obs, type = "box")
 ```
 
 ### Chart C
