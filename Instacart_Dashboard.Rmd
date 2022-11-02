@@ -7,7 +7,12 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
 library(flexdashboard)
+library(plotly)
+
+data("instacart")
 ```
 
 Column {data-width=650}
