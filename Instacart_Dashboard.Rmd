@@ -15,7 +15,7 @@ library(plotly)
 data("instacart")
 ```
 
-Column {data-width=650}
+Column {data-width= 600}
 -----------------------------------------------------------------------
 
 ### The number of orders under different departments.
@@ -27,7 +27,7 @@ instacart %>%
   plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
 ```
 
-Column {data-width=350}
+Column {data-width= 400}
 -----------------------------------------------------------------------
 
 ### The relationship between the days since the last order and the number of goods the customers buy.
