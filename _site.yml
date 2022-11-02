@@ -1,0 +1,12 @@
+name: "My internet"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:<zx2424@columbia.cumc.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/ZhaoqianyuXIONG/
+output:
+  html_document:
+    theme: cosmo
