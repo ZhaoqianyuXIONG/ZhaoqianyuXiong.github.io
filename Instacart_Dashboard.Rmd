@@ -5,3 +5,9 @@ output:
     orientation: columns
     vertical_layout: fill
 ---
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(flexdashboard)
+library(plotly)
+```
